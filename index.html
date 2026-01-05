@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер единиц</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Конвертер единиц измерения</h1>
+
+        <!-- Конвертер длины -->
+        <section class="converter" id="length">
+            <h2>Длина</h2>
+            <input type="number" id="length-input" placeholder="Введите значение">
+            <select id="length-from">
+                <option value="mm">мм</option>
+                <option value="cm">см</option>
+                <option value="m">м</option>
+                <option value="km">км</option>
+            </select>
+            →
+            <select id="length-to">
+                <option value="mm">мм</option>
+                <option value="cm">см</option>
+                <option value="m">м</option>
+                <option value="km">км</option>
+            </select>
+            <button onclick="convertLength()">Перевести</button>
+            <p id="length-result"></p>
+        </section>
+
+        <!-- Конвертер площади -->
+        <section class="converter" id="area">
+            <h2>Площадь</h2>
+            <input type="number" id="area-input" placeholder="Введите значение">
+            <select id="area-from">
+                <option value="sqm">м²</option>
+                <option value="sqkm">км²</option>
+                <option value="ha">га</option>
+            </select>
+            →
+            <select id="area-to">
+                <option value="sqm">м²</option>
+                <option value="sqkm">км²</option>
+                <option value="ha">га</option>
+            </select>
+            <button onclick="convertArea()">Перевести</button>
+            <p id="area-result"></p>
+        </section>
+
+        <!-- Конвертер объёма -->
+        <section class="converter" id="volume">
+            <h2>Объём</h2>
+            <input type="number" id="volume-input" placeholder="Введите значение">
+            <select id="volume-from">
+                <option value="l">л</option>
+                <option value="ml">мл</option>
+                <option value="cubicm">м³</option>
+            </select>
+            →
+            <select id="volume-to">
+                <option value="l">л</option>
+                <option value="ml">мл</option>
+                <option value="cubicm">м³</option>
+            </select>
+            <button onclick="convertVolume()">Перевести</button>
+            <p id="volume-result"></p>
+        </section>
+
+        <!-- Конвертер валюты -->
+        <section class="converter" id="currency">
+            <h2>Валюта (Floppacoin → RUB)</h2>
+            <input type="number" id="currency-input" placeholder="Floppacoin">
+            <button onclick="convertCurrency()">Перевести</button>
+            <p id="currency-result"></p>
+        </section>
+    </div>
+
+    <script src="js/units.js"></script>
+    <script src="js/currency.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
